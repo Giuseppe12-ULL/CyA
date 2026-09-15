@@ -20,8 +20,8 @@
  */
 void MostrarEmpleo(){
     std::cout << R"(
-    Modo de empleo: ./Calificaciones notas.txx"
-    "Pruebe 'p01_single_grades --help' para más información.
+    Modo de empleo: "./Calificaciones notas.txt" o "./Calificaciones notas.txt --max alu0101644080"
+    "Pruebe './Calificaciones --help' para más información.
     
     )";
 }
@@ -35,6 +35,7 @@ void MostrarEmpleo(){
 void MostrarAyuda(){
     std::cout << R"(
     Uso: ./Calificaciones <fichero_entrada>
+    uso: ./Calificaciones <fichero_entrada> --max <alumno>
 
     Descripción:
     Este programa lee un fichero de texto que contiene las notas de los alumnos.
@@ -44,10 +45,11 @@ void MostrarAyuda(){
 
     Opciones:
     --help            Muestra este mensaje de ayuda y termina.
+    --max             Obtiene la calificación máxima del alumno ingresado.
 
     Formato del fichero de entrada:
     El archivo debe contener el nombre del estudiante y su nota separados 
-    por un espacio, uno por línea.
+    por un espacio, uno por línea. La extensión del archivo debe ser ".txt"
     )";
 }
 
@@ -291,6 +293,31 @@ float CalificacionesMultiples::MediaEstudiante(const std::string& usuario) const
     }
 
     return media / calificaciones_estudiante.size();
+}
+
+/**
+ * @brief Obtiene la nota máxima del estudiante ingresado.
+ * 
+ * @details Reutiliza el getter para obtener el historial de notas. Si el 
+ * estudiante no tiene calificaciones, devuelve 0.0 si no se encuentra el 
+ * estudiante.
+ * 
+ * @param usuario  El identificador del alumno a consultar.
+ * @return float La máxima nota consultada.
+ */
+float CalificacionesMultiples::MejorNotaEstudiante(const std::string& usuario) const{
+    std::vector<float> calificaciones_estudiante{this->getter_calificaciones(usuario)};
+
+    if (calificaciones_estudiante.empty()) return 0.0f;
+    float calificacion_mayor{0.0f};
+
+    for (const float nota : calificaciones_estudiante){
+        if (nota > calificacion_mayor){
+            calificacion_mayor = nota;
+        }
+    }
+
+    return calificacion_mayor;
 }
 
 /**

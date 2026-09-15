@@ -50,6 +50,7 @@ class CalificacionesMultiples{
       std::vector<float> getter_calificaciones(const std::string& usuario) const;
       void AgregarCalificacion(const std::string& usuario, float calificacion);
       float MediaEstudiante(const std::string& usuario) const;
+      float MejorNotaEstudiante(const std::string& usuario) const;
       void ContadorConvocatorias() const;
       void EliminarEstudiante(const std::string& usuario);
       friend std::ifstream& operator>>(std::ifstream& input, CalificacionesMultiples& notas_multiples);

@@ -15,13 +15,14 @@
 #include "contenedor_asociativo.h" 
 
 int main(int argc, char* argv[]) {
-    if (argc != 2) {
+    if (argc < 2 || argc > 4 || argc == 3) {
         MostrarEmpleo(); 
         return 1; 
     }
 
-    std::string direccion = argv[1];
-
+    std::string direccion{argv[1]};
+    // ./p01_multiple_grades grades.txt --max alu0101010101
+    
     if (direccion == "--help") {
         MostrarAyuda();
         return 0; 
@@ -74,5 +75,18 @@ int main(int argc, char* argv[]) {
     std::cout << "Eliminando al estudiante insertado en el multimapa:\n";
     calificaciones_multiples.EliminarEstudiante("alu0101644080");
 
+    if (argc == 4 ){
+        if (std::string{argv[2]} != "--max"){
+            MostrarEmpleo();
+            return 1;
+        }
+        std::string alumno{argv[3]};
+        float calificacion_mayor{calificaciones_multiples.MejorNotaEstudiante(alumno)};
+        if (calificacion_mayor != 0.0f){
+            std::cout << "La calificación máxima es " << calificacion_mayor << ".\n";
+        }else{
+            std::cout << "\nNo se ha encontrado al estudiante " << alumno << ".\n";
+        }
+    }
     return 0;
 }
