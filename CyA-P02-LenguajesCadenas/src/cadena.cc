@@ -1,3 +1,16 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Computabilidad y Algoritmia
+// Curso: 2º
+// Práctica 1: Lenguaje y Cadenas
+// Autor: Giuseppe Fuentes Moreno
+// Correo: alu0101644080@ull.edu.es
+// Fecha: 19/09/2026
+// Archivo: cadena.cc
+// Descripción: Contiene la implementación de la clase Cadena.
+
+
 #include "lenguaje_cadena_alfabeto.h"
 
 /**

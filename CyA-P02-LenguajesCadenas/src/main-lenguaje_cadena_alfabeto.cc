@@ -7,7 +7,7 @@
 // Autor: Giuseppe Fuentes Moreno
 // Correo: alu0101644080@ull.edu.es
 // Fecha: 15/09/2026
-// Archivo: main-lenguaje_cadena.cc
+// Archivo: main-lenguaje_cadena_alfabeto.cc
 // Descripción: Programa cliente. Contiene la función main del proyecto 
 //              que utiliza las clases para procesar lenguajes y cadenas.
 

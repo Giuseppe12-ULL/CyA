@@ -7,7 +7,7 @@
 // Autor: Giuseppe Fuentes Moreno
 // Correo: alu0101644080@ull.edu.es
 // Fecha: 15/09/2026
-// Archivo: lenguaje_cadena.h
+// Archivo: lenguaje_cadena_alfabeto.h
 // Descripción: Contiene la definición de las clases Alfabeto, Cadenas y Lenguaje, 
 //              incluyendo sus atributos y las declaraciones de sus métodos.
 
