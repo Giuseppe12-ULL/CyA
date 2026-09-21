@@ -28,17 +28,29 @@ void MostrarUso();
 
 void MostrarAyuda();
 
+class Simbolo{
+  public:
+    Simbolo(const char sim = ' ') : simbolo_{sim}{}
+    char getter_simbolo() const{return simbolo_;}
+    void setter_simbolo(const char sim){simbolo_ = sim;}
+    friend std::ostream& operator<<(std::ostream& output,const Simbolo& simbolo);
+    friend bool operator<(const Simbolo& simbolo_1,const Simbolo& simbolo_2);
+    friend bool operator==(const Simbolo& simbolo_1,const Simbolo& simbolo);
+  private:
+    char simbolo_{};
+};
+
 class Alfabeto{
   public:
     ~Alfabeto(){}
     Alfabeto(const std::string& simbolos = "");
     friend std::ostream& operator<<(std::ostream& out, const Alfabeto& alfabeto);
     friend std::istream& operator>>(std::istream& input, Alfabeto& alfabeto);
-    std::set<char> getter_alfabeto() const {return alfabeto_;};
+    std::set<Simbolo> getter_alfabeto() const {return alfabeto_;};
     void AgregarSimbolo(const char simbolo);
     void EliminarSimbolo(const char simbolo);
   private:
-    std::set<char> alfabeto_{};
+    std::set<Simbolo>alfabeto_{};
 };
 
 class Cadena; 

@@ -67,6 +67,46 @@ void MostrarAyuda() {
 )";
 }
 
+/**
+ * @brief Se sobrecarga el operador de insercción para la clase Simbolo.
+ * 
+ * @param output 
+ * @param simbolo 
+ * @return std::ostream& 
+ */
+std::ostream& operator<<(std::ostream& output,const Simbolo& simbolo){
+  output << simbolo.simbolo_;
+  return output;
+}
+
+
+/**
+ * @brief Compara dos símbolos lexicográficamente según su valor ASCII.
+ * 
+ * Requisito indispensable para que los símbolos puedan ordenarse 
+ * correctamente dentro de la estructura std::set del Alfabeto.
+ * 
+ * @param simbolo_1 Primer objeto Simbolo.
+ * @param simbolo_2 Segundo objeto Simbolo.
+ * @return true Si el primer símbolo es menor que el segundo.
+ * @return false En caso contrario.
+ */
+bool operator<(const Simbolo& simbolo_1, const Simbolo& simbolo_2) {
+  return simbolo_1.simbolo_ < simbolo_2.simbolo_;
+}
+
+/**
+ * @brief Verifica la igualdad estricta entre dos símbolos.
+ * 
+ * @param simbolo_1 Primer objeto Simbolo.
+ * @param simbolo_2 Segundo objeto Simbolo.
+ * @return true Si ambos contienen exactamente el mismo carácter.
+ * @return false Si son distintos.
+ */
+bool operator==(const Simbolo& simbolo_1, const Simbolo& simbolo_2) {
+  return simbolo_1.simbolo_ == simbolo_2.simbolo_;
+}
+
 // =========================================================================
 // ---------------------- IMPLEMENTACIÓN DEL ALFABETO ----------------------
 // =========================================================================
@@ -84,7 +124,7 @@ Alfabeto::Alfabeto(const std::string& simbolos) {
 
   for (const char caracter : simbolos) {
     if (caracter == '&') continue;
-    alfabeto_.insert(caracter);
+    alfabeto_.insert(Simbolo{caracter});
   }
 }
 
@@ -101,7 +141,7 @@ void Alfabeto::AgregarSimbolo(const char simbolo) {
     return;
   }
   
-  alfabeto_.insert(simbolo);
+  alfabeto_.insert(Simbolo{simbolo});
 }
 
 /**
@@ -121,7 +161,7 @@ std::ostream& operator<<(std::ostream& out, const Alfabeto& alfabeto) {
 
   out << "{";
   size_t i{0};
-  for (const char simbolo : alfabeto.alfabeto_) {
+  for (const Simbolo& simbolo : alfabeto.alfabeto_) {
     out << simbolo << ((i == alfabeto.alfabeto_.size() - 1) ? "}" : ", ");
     i++; 
   }
@@ -160,5 +200,5 @@ std::istream& operator>>(std::istream& input, Alfabeto& alfabeto) {
  * @param simbolo Carácter individual que se desea eliminar del alfabeto.
  */
 void Alfabeto::EliminarSimbolo(const char simbolo) {
-  alfabeto_.erase(simbolo);
+  alfabeto_.erase(Simbolo(simbolo));
 }

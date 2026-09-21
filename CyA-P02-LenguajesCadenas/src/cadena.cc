@@ -65,7 +65,7 @@ bool Cadena::Validacion(const Alfabeto& alfabeto) const {
   if (cadena_ == "&") return true;
 
   for (const char caracter : cadena_) {
-    if (alfabeto_.find(caracter) == alfabeto_.end()) {
+    if (alfabeto_.find(Simbolo(caracter)) == alfabeto_.end()) {
       return false; 
     }
   }
