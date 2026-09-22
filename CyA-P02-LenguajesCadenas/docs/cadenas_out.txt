@@ -1,44 +1,4 @@
---- OPERACIONES DE LENGUAJES PARA CADENA: abbab ---
-L1 (Prefijos) : {&, a, ab, abb, abba, abbab}
-L2 (Sufijos)  : {&, b, ab, bab, bbab, abbab}
-Union (L1 U L2): {&, a, b, ab, abb, bab, abba, bbab, abbab}
-Intersec (L1 n L2): {&, ab, abbab}
-Diferencia (L1 - L2): {a, abb, abba}
-Concatenacion (L1 + L2): {&, a, b, ab, aab, abb, bab, abab, abba, abbb, bbab, abbab, aabbab, abbaab, abbabb, abbbab, ababbab, abbabab, abbbbab, abbabbab, abbaabbab, abbabbbab, abbababbab}
-L1 es sublenguaje de L1 U L2? : Si
-Cierre Kleene L1 (n=2): {&, a, aa, ab, aab, aba, abb, aabb, abab, abba, aabba, ababb, abbaa, abbab, aabbab, ababba, abbaab, abbaba, abbabb, ababbab, abbaabb, abbabab, abbabba, abbaabba, abbababb, abbabbab, abbaabbab, abbababba, abbababbab}
---------------------------------------------------------
-
---- OPERACIONES DE LENGUAJES PARA CADENA: 6793836 ---
-L1 (Prefijos) : {&, 6, 67, 679, 6793, 67938, 679383, 6793836}
-L2 (Sufijos)  : {&, 6, 36, 836, 3836, 93836, 793836, 6793836}
-Union (L1 U L2): {&, 6, 36, 67, 679, 836, 3836, 6793, 67938, 93836, 679383, 793836, 6793836}
-Intersec (L1 n L2): {&, 6, 6793836}
-Diferencia (L1 - L2): {67, 679, 6793, 67938, 679383}
-Concatenacion (L1 + L2): {&, 6, 36, 66, 67, 636, 676, 679, 836, 3836, 6736, 6793, 6796, 6836, 63836, 67836, 67936, 67938, 93836, 673836, 679336, 679383, 679386, 679836, 693836, 793836, 6793836, 66793836, 67793836, 67933836, 67938336, 67938366, 67938836, 67993836, 676793836, 679383636, 679383836, 679393836, 679793836, 6793793836, 6793833836, 6793836836, 6793893836, 6796793836, 67936793836, 67938363836, 67938393836, 67938793836, 679383693836, 679383793836, 679386793836, 6793836793836, 67938366793836}
-L1 es sublenguaje de L1 U L2? : Si
-Cierre Kleene L1 (n=2): {&, 6, 66, 67, 667, 676, 679, 6679, 6767, 6793, 6796, 66793, 67679, 67936, 67938, 67967, 667938, 676793, 679367, 679383, 679386, 679679, 6679383, 6767938, 6793679, 6793836, 6793867, 6796793, 66793836, 67679383, 67936793, 67938366, 67938367, 67938679, 67967938, 676793836, 679367938, 679383667, 679383679, 679386793, 679679383, 6793679383, 6793836679, 6793836793, 6793867938, 6796793836, 67936793836, 67938366793, 67938367938, 67938679383, 679383667938, 679383679383, 679386793836, 6793836679383, 6793836793836, 67938366793836}
---------------------------------------------------------
-
---- OPERACIONES DE LENGUAJES PARA CADENA: hola ---
-L1 (Prefijos) : {&, h, ho, hol, hola}
-L2 (Sufijos)  : {&, a, la, ola, hola}
-Union (L1 U L2): {&, a, h, ho, la, hol, ola, hola}
-Intersec (L1 n L2): {&, hola}
-Diferencia (L1 - L2): {h, ho, hol}
-Concatenacion (L1 + L2): {&, a, h, ha, ho, la, hla, hoa, hol, ola, hola, hhola, holaa, holla, hoola, hohola, holala, holola, holaola, holhola, holahola}
-L1 es sublenguaje de L1 U L2? : Si
-Cierre Kleene L1 (n=2): {&, h, hh, ho, hho, hoh, hol, hhol, hoho, hola, holh, hhola, hohol, holah, holho, hohola, holaho, holhol, holahol, holhola, holahola}
---------------------------------------------------------
-
---- OPERACIONES DE LENGUAJES PARA CADENA: 012 ---
-L1 (Prefijos) : {&, 0, 01, 012}
-L2 (Sufijos)  : {&, 2, 12, 012}
-Union (L1 U L2): {&, 0, 2, 01, 12, 012}
-Intersec (L1 n L2): {&, 012}
-Diferencia (L1 - L2): {0, 01}
-Concatenacion (L1 + L2): {&, 0, 2, 01, 02, 12, 012, 0012, 0112, 0122, 01012, 01212, 012012}
-L1 es sublenguaje de L1 U L2? : Si
-Cierre Kleene L1 (n=2): {&, 0, 00, 01, 001, 010, 012, 0012, 0101, 0120, 01012, 01201, 012012}
---------------------------------------------------------
-
+abbab: abbabhola
+6793836: 6793836hola
+hola: holahola
+012: 012hola

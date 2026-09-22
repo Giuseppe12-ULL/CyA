@@ -21,7 +21,7 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-  if (argc != 4) {
+  if (argc < 4 || argc > 5) {
     MostrarAyuda(); 
     return 1;
   }
@@ -41,6 +41,7 @@ int main(int argc, char* argv[]) {
 
   std::string linea;
   
+
   while (std::getline(archivo_entrada, linea)) {
     std::stringstream flujo_linea{linea};
     Cadena cadena;
@@ -78,13 +79,17 @@ int main(int argc, char* argv[]) {
           // Validacion
           archivo_salida << (cadena.Validacion(alfabeto) ? "OK" : "ERROR") << "\n";
           break;
-
-        case 7:
+        case 7: {
+          std::string cadena_adicional{argv[4]};
+          archivo_salida << cadena << ": " << cadena + cadena_adicional << "\n";
+          break;
+        }
+        case 8:
           // Subsecuencias (Nuevo método generador de lenguajes)
           archivo_salida << cadena.Subsecuencias() << "\n";
           break;
 
-        case 8: {
+        case 9: {
           // Operaciones entre cadenas (usando una cadena auxiliar "ab" de prueba)
           Cadena aux{"ab"};
           archivo_salida << "Cadena: " << cadena << " | Aux: " << aux << "\n"
@@ -94,13 +99,13 @@ int main(int argc, char* argv[]) {
           break;
         }
 
-        case 9:
+        case 10:
           // Potencia de cadena (Probamos n = 3)
           archivo_salida << "Cadena original: " << cadena << "\n"
                          << "Cadena ^ 3: " << (cadena ^ 3) << "\n\n";
           break;
 
-        case 10: {
+        case 11: {
           // Operaciones avanzadas de Lenguajes
           // Generamos L1 y L2 a partir de la propia cadena para poder operar
           Lenguaje L1 = cadena.Prefijos();

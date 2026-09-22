@@ -57,10 +57,11 @@ void MostrarAyuda() {
     4 : Prefijos      - Genera el lenguaje de prefijos de la cadena.
     5 : Sufijos       - Genera el lenguaje de sufijos de la cadena.
     6 : Validacion    - Comprueba si la cadena esta sobre el alfabeto (OK/ERROR).
-    7 : Subsecuencias - Genera el lenguaje de subsecuencias (2^n combinaciones).
-    8 : Oper. Cadenas - Prueba Subcadena, Prefijo y Sufijo común (contra aux "ab").
-    9 : Potencia      - Eleva la cadena al cubo (cadena ^ 3).
-   10 : Op. Lenguajes - Muestra Union, Interseccion, Diferencia, Concatenacion y 
+    7 : Concatenación - Se concatena con una cadena ingresada por comandos.
+    8 : Subsecuencias - Genera el lenguaje de subsecuencias (2^n combinaciones).
+    9 : Oper. Cadenas - Prueba Subcadena, Prefijo y Sufijo común (contra aux "ab").
+    10 : Potencia      - Eleva la cadena al cubo (cadena ^ 3).
+    11 : Op. Lenguajes - Muestra Union, Interseccion, Diferencia, Concatenacion y 
                         Cierres usando los Prefijos y Sufijos como L1 y L2.
   --------------------------------------------------------
   
