@@ -1,3 +1,18 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Computabilidad y Algoritmia
+// Curso: 2º
+// Práctica 4: Expresiones regulares en C++
+// Autor: Giuseppe Fuentes Moreno
+// Correo: alu0101644080@ull.edu.es
+// Fecha: 29/09/2026
+// Archivo: main_expresion_regular.cc
+// Descripción: Contiene la función principal (main) del programa, encargada 
+//              de procesar los argumentos de la línea de comandos e instanciar 
+//              la clase ParseoHTML para analizar el fichero de entrada.
+
+
 #include "expresion_regular.h"
 
 int main(int argc, char* argv[]) {

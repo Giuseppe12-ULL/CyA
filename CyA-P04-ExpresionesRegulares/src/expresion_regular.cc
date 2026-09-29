@@ -1,5 +1,18 @@
-#include "expresion_regular.h"
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Computabilidad y Algoritmia
+// Curso: 2º
+// Práctica 4: Expresiones regulares en C++
+// Autor: Giuseppe Fuentes Moreno
+// Correo: alu0101644080@ull.edu.es
+// Fecha: 29/09/2026
+// Archivo: expresion_regular.cc
+// Descripción: Contiene la implementación de los métodos de la clase ParseoHTML, 
+//              encargados de extraer etiquetas, atributos, estructura y comentarios 
+//              de un fichero HTML mediante la librería <regex>.
 
+#include "expresion_regular.h"
 
 /**
  * @brief Extrae las etiquetas que definen la estructura básica del documento HTML.

@@ -1,3 +1,17 @@
+// Universidad de La Laguna
+// Escuela Superior de Ingeniería y Tecnología
+// Grado en Ingeniería Informática
+// Asignatura: Computabilidad y Algoritmia
+// Curso: 2º
+// Práctica 4: Expresiones regulares en C++
+// Autor: Giuseppe Fuentes Moreno
+// Correo: alu0101644080@ull.edu.es
+// Fecha: 29/09/2026
+// Archivo: expresion_regular.h
+// Descripción: Contiene la definición de la clase ParseoHTML, las estructuras 
+//              auxiliares (Comentario y Atributo) y las declaraciones de las 
+//              funciones de ayuda al usuario.
+
 #ifndef EXPRESION_REGULAR_H
 #define EXPRESION_REGULAR_H
 
