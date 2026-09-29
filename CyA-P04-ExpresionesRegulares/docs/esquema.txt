@@ -1,0 +1,81 @@
+PROGRAM : docs/entrada.html
+
+DESCRIPTION :
+<!-- Pagina principal de la asignatura de Computabilidad y Algoritmia -->
+
+STRUCTURE :
+HTML : True
+HEAD : True
+BODY : True
+DOCTYPE : HTML5
+
+TAGS :
+[ Line 3] html
+[ Line 4] head
+[ Line 5] title
+[ Line 5] /title
+[ Line 6] /head
+[ Line 7] body
+[ Line 8] h1
+[ Line 8] /h1
+[ Line 10] p
+[ Line 10] /p
+[ Line 12] a
+[ Line 12] /a
+[ Line 14] h2
+[ Line 14] /h2
+[ Line 16] p
+[ Line 16] /p
+[ Line 18] img
+[ Line 20] ul
+[ Line 21] li
+[ Line 21] /li
+[ Line 22] li
+[ Line 22] /li
+[ Line 23] /ul
+[ Line 25] h2
+[ Line 25] /h2
+[ Line 27] p
+[ Line 27] /p
+[ Line 29] a
+[ Line 29] /a
+[ Line 31] img
+[ Line 33] ol
+[ Line 34] li
+[ Line 34] /li
+[ Line 35] li
+[ Line 35] /li
+[ Line 36] li
+[ Line 36] /li
+[ Line 37] /ol
+[ Line 43] /body
+[ Line 44] /html
+
+ATTRIBUTES :
+[ Line 12] a
+href="https://campusvirtual.ull.es"
+class="enlace"
+
+[ Line 18] img
+src="regex.png"
+alt="Expresiones regulares"
+width="400"
+
+[ Line 29] a
+href="https://regex101.com"
+target="_blank"
+
+[ Line 31] img
+src="logo.png"
+alt="Logo de la universidad"
+
+COMMENTS :
+[ Line 2] DESCRIPTION
+<!-- Pagina principal de la asignatura de Computabilidad y Algoritmia -->
+
+[ Line 39 - 42]
+    <!--
+    Esta seccion contiene los recursos recomendados.
+    El contenido puede cambiar durante el curso.
+    -->
+
